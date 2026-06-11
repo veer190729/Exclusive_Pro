@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .container-figma {
+    @apply mx-auto w-full max-w-container px-4 sm:px-6 lg:px-0;
+  }
+
+  .section-figma {
+    @apply mx-auto w-full max-w-container px-4 pt-section-y sm:px-6 lg:px-0;
+  }
+
+  .figma-tag-bar {
+    @apply h-10 w-5 shrink-0 rounded-figma bg-primary;
+  }
+
+  .figma-section-title {
+    @apply text-figma-2xl font-semibold tracking-figma text-secondary;
+  }
+
+  .figma-section-tag {
+    @apply text-figma-base font-semibold text-primary;
+  }
+
+  .figma-nav-link {
+    @apply text-figma-base text-text-light transition-colors hover:text-secondary;
+  }
+
+  .figma-nav-link-active {
+    @apply border-b border-secondary pb-0.5 text-secondary;
+  }
+
+  .figma-input {
+    @apply w-full rounded-figma border border-line-light bg-white px-4 py-3 text-figma-base outline-none transition-colors placeholder:text-text-light focus:border-primary;
+  }
+
+  .figma-input-underline {
+    @apply w-full border-b border-line-light bg-transparent py-3 text-figma-base outline-none placeholder:text-text-light focus:border-primary;
+  }
+
+  .figma-card {
+    @apply rounded-figma border border-line-light bg-white shadow-figma;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
